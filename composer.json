@@ -1,0 +1,9 @@
+{
+    "name": "ponup/mammoth",
+    "description": "Mammoth framework - Multimedia with PHP",
+    "autoload": {
+        "psr-4": {
+            "Mammoth\\": "src"
+        }
+    }
+}
