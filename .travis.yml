@@ -2,4 +2,9 @@ language: php
 php:
   - '7.3'
   - '7.4'
+before_script:
+  - composer install
+  - pecl install sdl-devel
+  - pecl install opengl-devel
+  - pecl install openal-devel
 script: phpunit tests 
