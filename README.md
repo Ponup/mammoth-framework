@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/Ponup/mammoth-framework.svg?branch=master)](https://travis-ci.org/Ponup/mammoth-framework)
 
 ![Mammoth](mammoth.png "Mammoth Framework")
 
