@@ -20,7 +20,10 @@ install:
 before_script:
   - composer install
   - pecl install sdl-devel
+  - echo "extension=sdl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - pecl install opengl-devel
+  - echo "extension=opengl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - pecl install openal-devel
+  - echo "extension=openal.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 
 script: phpunit tests 

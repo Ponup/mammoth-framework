@@ -6,12 +6,6 @@ namespace Mammoth\Graphic\Shader;
 
 class ProgramTest extends \PHPUnit\Framework\TestCase
 {
-
-    public static function setUpBeforeClass(): void
-    {
-        extension_loaded('opengl') || dl('opengl.' . PHP_SHLIB_SUFFIX);
-    }
-
     /**
      * @requires extension opengl
      */
