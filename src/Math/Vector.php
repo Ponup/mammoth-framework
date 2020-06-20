@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Mammoth\Math;
 
-class Vector
+class Vector implements \ArrayAccess
 {
 
     public $x, $y, $z;
@@ -81,5 +81,40 @@ class Vector
             $this->z * $other->x - $this->x * $other->z,
             $this->x * $other->y - $this->y * $other->x
         );
+    }
+
+    public function offsetExists($offset): bool
+    {
+        return ($offset >= 0 && $offset <= 2);
+    }
+
+    public function offsetGet($offset)
+    {
+        switch ($offset) {
+            case 0:
+                return $this->x;
+            case 1:
+                return $this->y;
+            case 2:
+                return $this->z;
+        }
+    }
+
+    public function offsetSet($offset, $value): void
+    {
+    }
+
+    public function offsetUnset($offset): void
+    {
+    }
+
+    public function toArray(): array
+    {
+        return [$this->x, $this->y, $this->z];
+    }
+
+    public function __toString(): string
+    {
+        return sprintf('Vector(%s)', implode(', ', $this->toArray()));
     }
 }

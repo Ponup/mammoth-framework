@@ -1,6 +1,9 @@
 {
     "name": "ponup/mammoth",
     "description": "Mammoth framework - Multimedia with PHP",
+    "require-dev": {
+    	"phpunit/phpunit": "^9.2"
+    },
     "autoload": {
         "psr-4": {
             "Mammoth\\": "src"
