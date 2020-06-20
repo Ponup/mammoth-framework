@@ -9,9 +9,9 @@ Mammoth is a framework that allows you to create multimedia apps in PHP. It give
 ## Requirements
 
 * PHP 7.3+
-* PHP-SDL extension
-* PHP-OpenGL extension
-* PHP-OpenAL extension
+* SDL bindings for PHP provided by the [PHP-SDL extension](https://github.com/Ponup/php-sdl)
+* OpenGL bindings for PHP provided by the [PHP-OpenGL extension](https://github.com/Ponup/php-opengl)
+* OpenAL bindings for PHP provided by the [PHP-OpenAL extension](https://github.com/Ponup/php-openal)
 
 ## How to use
 
