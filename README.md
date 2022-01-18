@@ -8,7 +8,7 @@ Mammoth is a framework that allows you to create multimedia apps in PHP. It give
 
 ## Requirements
 
-* PHP 7.3+
+* PHP 8.1+
 * SDL bindings for PHP provided by the [PHP-SDL extension](https://github.com/Ponup/php-sdl)
 * OpenGL bindings for PHP provided by the [PHP-OpenGL extension](https://github.com/Ponup/php-opengl)
 * OpenAL bindings for PHP provided by the [PHP-OpenAL extension](https://github.com/Ponup/php-openal)
@@ -16,13 +16,13 @@ Mammoth is a framework that allows you to create multimedia apps in PHP. It give
 ## How to use
 
 ```sh
-$ composer require ponup/mammoth
+composer require ponup/mammoth
 ```
 
 ## Running unit tests
 
 ```sh
-$ make test
+make test
 ```
 
 ## Contributors
