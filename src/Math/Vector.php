@@ -83,12 +83,12 @@ class Vector implements \ArrayAccess
         );
     }
 
-    public function offsetExists($offset): bool
+    public function offsetExists(mixed $offset): bool
     {
         return ($offset >= 0 && $offset <= 2);
     }
 
-    public function offsetGet($offset)
+    public function offsetGet(mixed $offset): mixed
     {
         switch ($offset) {
             case 0:
@@ -100,11 +100,11 @@ class Vector implements \ArrayAccess
         }
     }
 
-    public function offsetSet($offset, $value): void
+    public function offsetSet(mixed $offset, mixed $value): void
     {
     }
 
-    public function offsetUnset($offset): void
+    public function offsetUnset(mixed $offset): void
     {
     }
 
