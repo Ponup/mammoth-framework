@@ -1,19 +1,13 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Mammoth\Math;
 
 class Vector implements \ArrayAccess
 {
-
-    public $x, $y, $z;
-
-    public function __construct(float $x = 0, float $y = 0, float $z = 0)
+    public function __construct(public float $x = 0,
+		public float $y = 0,
+		public float $z = 0)
     {
-        $this->x = $x;
-        $this->y = $y;
-        $this->z = $z;
     }
 
     public function length(): float
@@ -90,14 +84,11 @@ class Vector implements \ArrayAccess
 
     public function offsetGet(mixed $offset): mixed
     {
-        switch ($offset) {
-            case 0:
-                return $this->x;
-            case 1:
-                return $this->y;
-            case 2:
-                return $this->z;
-        }
+		return match($offset) {
+            0 => $this->x,
+			1 => $this->y,
+			2 => $this->z
+        };
     }
 
     public function offsetSet(mixed $offset, mixed $value): void
@@ -118,3 +109,4 @@ class Vector implements \ArrayAccess
         return sprintf('Vector(%s)', implode(', ', $this->toArray()));
     }
 }
+

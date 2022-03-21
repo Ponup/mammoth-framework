@@ -1,32 +1,18 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Mammoth\Graphic\Shader;
 
 class Code
 {
-
     const VERTEX = 'VERTEX';
     const GEOMETRY = 'GEOMETRY';
     const FRAGMENT = 'FRAGMENT';
 
-    /**
-     * @var int
-     */
-    private $type;
+    private int $type;
+    private int $id;
+    private string $source;
 
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var string
-     */
-    private $source;
-
-    public function __construct($type, $source, $sourceIsCode = false)
+    public function __construct(int $type, string $source, $sourceIsCode = false)
     {
         $this->type = $type;
         $this->source = false === $sourceIsCode ? file_get_contents($source) : $source;

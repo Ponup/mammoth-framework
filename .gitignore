@@ -1,2 +1,4 @@
 vendor
 tags
+clover.xml
+.phpunit.result.cache

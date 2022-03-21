@@ -1,20 +1,14 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Mammoth\Graphic;
 
 class Color
 {
-
-	public $r, $g, $b, $a;
-
-	public function __construct(float $r, float $g, float $b, float $a = 0)
+	public function __construct(public float $r,
+		public float $g,
+		public float $b,
+		public float $a = 0)
 	{
-		$this->r = $r;
-		$this->g = $g;
-		$this->b = $b;
-		$this->a = $a;
 	}
 
 	public function times(Color $other): Color
