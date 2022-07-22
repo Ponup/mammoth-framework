@@ -1,6 +1,4 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Mammoth\Audio;
 
@@ -8,10 +6,7 @@ class WaveFileReader
 {
     private const HEADER_LENGTH = 44;
 
-    /**
-     * @var string
-     */
-    private $filePath;
+    private string $filePath;
 
     public function __construct(string $filePath)
     {

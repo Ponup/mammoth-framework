@@ -6,26 +6,13 @@ namespace Mammoth\Graphic;
 
 class WavefrontObj
 {
+    public array $vertices;
 
-    /**
-     * @var array
-     */
-    public $vertices;
+    public array $verticesIndices;
 
-    /**
-     * @var array
-     */
-    public $verticesIndices;
+    public array $textureCoordinates;
 
-    /**
-     * @var array
-     */
-    public $textureCoordinates;
-
-    /**
-     * @var array
-     */
-    public $normals;
+    public array $normals;
 
     public function __construct()
     {
@@ -35,7 +22,7 @@ class WavefrontObj
         $this->normals = [];
     }
 
-    public function getIndicesAsFloatArray()
+    public function getIndicesAsFloatArray(): array
     {
         $result = [];
         foreach ($this->verticesIndices as $vertex) {
@@ -47,7 +34,7 @@ class WavefrontObj
         return $result;
     }
 
-    public function getVerticesAsFloatArray()
+    public function getVerticesAsFloatArray(): array
     {
         $ll = $this->vertices;
         $result = [];
@@ -59,39 +46,27 @@ class WavefrontObj
         return $result;
     }
 
-    /**
-     * @return array
-     */
-    public function getVertices()
+    public function getVertices(): array
     {
         return $this->vertices;
     }
 
-    /**
-     * @return array
-     */
-    public function getVertexNormals()
+    public function getVertexNormals(): array
     {
         return $this->normals;
     }
 
-    /**
-     * @return array
-     */
-    public function getVertexFaces()
+    public function getVertexFaces(): array
     {
         return $this->verticesIndices;
     }
 
-    /**
-     * @return array
-     */
-    public function getTextureCoordinates()
+    public function getTextureCoordinates(): array
     {
         return $this->textureCoordinates;
     }
 
-    public function getIndices()
+    public function getIndices(): array
     {
         $ll = $this->vertices;
         $result = [];
@@ -103,7 +78,7 @@ class WavefrontObj
         return $result;
     }
 
-    public function __toString()
+    public function __toString(): string
     {
         return sprintf('Obj( Num vertices: %d, Num normals: %d, Num faces: %d )', count($this->vertices), count($this->normals), count($this->verticesIndices));
     }

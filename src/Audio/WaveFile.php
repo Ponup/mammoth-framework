@@ -1,16 +1,14 @@
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 namespace Mammoth\Audio;
 
 class WaveFile
 {
-    private $header;
+    private array $header;
 
-    private $subChunk1;
+    private array $subChunk1;
 
-    private $subChunk2;
+    private array $subChunk2;
 
     public function setHeader(array $header): void
     {

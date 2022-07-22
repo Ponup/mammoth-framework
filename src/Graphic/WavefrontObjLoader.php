@@ -14,11 +14,7 @@ use Mammoth\Math\Vector;
 class WavefrontObjLoader
 {
 
-    /**
-     * @param string $path
-     * @return WavefrontObj
-     */
-    public function load($path)
+    public function load(string $path): WavefrontObj
     {
         if (!file_exists($path)) {
             throw new \Exception('File not found: ' . $path);

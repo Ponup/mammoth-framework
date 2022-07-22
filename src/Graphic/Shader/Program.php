@@ -6,16 +6,9 @@ namespace Mammoth\Graphic\Shader;
 
 class Program
 {
+    private int $id;
 
-    /**
-     * @var int
-     */
-    private $id;
-
-    /**
-     * @var array
-     */
-    private $shaders;
+    private array $shaders;
 
     public function __construct()
     {
