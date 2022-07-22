@@ -9,6 +9,6 @@ class Fragment extends Code
 
     public function __construct($source, $sourceIsCode = false)
     {
-        parent::__construct(self::FRAGMENT, $source, $sourceIsCode);
+        parent::__construct(ShaderType::Fragment, $source, $sourceIsCode);
     }
 }

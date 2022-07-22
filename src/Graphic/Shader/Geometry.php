@@ -9,6 +9,6 @@ class Geometry extends Code
 
     public function __construct($source, $sourceIsCode = false)
     {
-        parent::__construct(self::GEOMETRY, $source, $sourceIsCode);
+        parent::__construct(ShaderType::Geometry, $source, $sourceIsCode);
     }
 }

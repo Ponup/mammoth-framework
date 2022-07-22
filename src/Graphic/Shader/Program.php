@@ -26,7 +26,7 @@ class Program
         return $this->id;
     }
 
-    public function add(Code $code)
+    public function add(Code $code): void
     {
         $this->shaders[] = $code;
     }
@@ -36,14 +36,14 @@ class Program
         return $this->shaders;
     }
 
-    public function compile()
+    public function compile(): void
     {
         foreach ($this->shaders as $shader) {
             $shader->compile();
         }
     }
 
-    public function link()
+    public function link(): void
     {
         foreach ($this->shaders as $shader) {
             glAttachShader($this->id, $shader->getId());
@@ -54,7 +54,7 @@ class Program
     /**
      * @throws Exception
      */
-    public function use()
+    public function use(): void
     {
         glUseProgram($this->id);
     }

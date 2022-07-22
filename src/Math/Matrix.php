@@ -42,7 +42,7 @@ class Matrix implements \ArrayAccess
 
     public function scale(float $value): Matrix
     {
-        if ($value instanceof Vector || is_numeric($value)) {
+        if (is_numeric($value)) {
             return new Matrix([
                 [$this->data[0][0] * $value, $this->data[0][1] * $value, $this->data[0][2] * $value, $this->data[0][3] * $value],
                 [$this->data[1][0] * $value, $this->data[1][1] * $value, $this->data[1][2] * $value, $this->data[1][3] * $value],
