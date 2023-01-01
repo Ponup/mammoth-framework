@@ -24,4 +24,10 @@ class MatrixTest extends \PHPUnit\Framework\TestCase
         $matrix = new Matrix;
         $this->assertEquals('mat4x4((1.000000, 0.000000, 0.000000, 0.000000), (0.000000, 1.000000, 0.000000, 0.000000), (0.000000, 0.000000, 1.000000, 0.000000), (0.000000, 0.000000, 0.000000, 1.000000))', strval($matrix));
     }
+
+	public function testArrayAccess()
+	{
+		$matrix = new Matrix();
+		$this->assertequals([1, 0, 0, 0], $matrix[0]);
+	}
 }

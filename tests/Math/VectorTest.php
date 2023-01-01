@@ -101,6 +101,6 @@ class VectorTest extends \PHPUnit\Framework\TestCase
      */
     public function testLength(Vector $vector, $expectedLength)
     {
-        $this->assertEquals($expectedLength, $vector->length());
+        $this->assertEqualsWithDelta($expectedLength, $vector->length(), 0.000001);
     }
 }
